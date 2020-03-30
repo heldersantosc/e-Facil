@@ -6,6 +6,7 @@ import SplashScreen from "./pages/SplashScreen";
 import SelectUnit from "./pages/Unit";
 import CheckAccess from "./pages/CheckAccess";
 import SelectFloor from "./pages/SelectFloor";
+import SelectVacancy from "./pages/SelectVacancy";
 
 export default function Routes() {
   return (
@@ -17,6 +18,7 @@ export default function Routes() {
         <Route path="/login" component={Login} />
         <Route path="/checkaccess" component={CheckAccess} />
         <Route path="/selectfloor" component={SelectFloor} />
+        <Route path="/selectvacancy" component={SelectVacancy} />
       </Switch>
     </Router>
   );

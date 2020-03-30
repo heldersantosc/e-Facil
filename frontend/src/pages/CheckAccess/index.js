@@ -25,7 +25,7 @@ export default function CheckAccess() {
         history.push("/selectfloor");
       }, 2000);
     }
-  }, [option]);
+  }, [option, history]);
 
   return (
     <div className="checkaccess">

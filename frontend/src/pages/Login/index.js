@@ -10,21 +10,27 @@ import KeyboardOption from "../../components/KeyboardOption";
 
 export default function Login() {
   const [matricula, setMatricula] = useState("");
+  const [inputVisible, setInputVisible] = useState(false);
   const history = useHistory();
 
   function handleKeyboard(numberValue) {
     if (matricula.length < 8) {
       setMatricula(matricula + numberValue);
+      setInputVisible(true);
     }
   }
   function deleteCharacter() {
     setMatricula(matricula.slice(0, -1));
+    if (matricula.length <= 1) {
+      setInputVisible(false);
+    }
   }
 
   function checkAccess() {
     if (matricula.length < 8) {
     } else {
       localStorage.setItem("permissionAccess", true);
+      setInputVisible(true);
       history.push("/checkaccess");
     }
   }
@@ -90,16 +96,22 @@ export default function Login() {
           <div className="round">
             <IoMdPerson size={200} color="#fa733b" />
           </div>
-          <input
-            className="inputMatricula"
-            type="text"
-            name=""
-            id=""
-            placeholder="Matrícula"
-            value={matricula}
-            onChange={e => setMatricula(e.target.value)}
-            readOnly
-          />
+          {inputVisible ? (
+            <>
+              <input
+                className={`inputMatricula`}
+                type="text"
+                name=""
+                id=""
+                placeholder="Matrícula"
+                value={matricula}
+                onChange={e => setMatricula(e.target.value)}
+                readOnly
+              />
+            </>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

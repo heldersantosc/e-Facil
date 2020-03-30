@@ -11,7 +11,6 @@ export default function Unit() {
 
   function chooseUnit() {
     setVisible(!visible);
-    console.log(visible);
   }
 
   return (
@@ -26,32 +25,27 @@ export default function Unit() {
           <ul>
             <Link to="/login">
               <li>
-                <span>Unidade 1</span>
-              </li>
-            </Link>
-            <Link to="/login">
-              <li>
-                <span>Unidade 2</span>
-              </li>
-            </Link>
-            <Link to="/login">
-              <li>
                 <span>Unidade 3</span>
               </li>
             </Link>
             <Link to="/login">
               <li>
-                <span>Unidade 4</span>
-              </li>
-            </Link>
-            <Link to="/login">
-              <li>
-                <span>Unidade 5</span>
-              </li>
-            </Link>
-            <Link to="/login">
-              <li>
                 <span>Unidade 6</span>
+              </li>
+            </Link>
+            <Link to="/login">
+              <li>
+                <span>Unidade 9</span>
+              </li>
+            </Link>
+            <Link to="/login">
+              <li>
+                <span>Unidade 10</span>
+              </li>
+            </Link>
+            <Link to="/login">
+              <li>
+                <span>Unidade 11</span>
               </li>
             </Link>
           </ul>

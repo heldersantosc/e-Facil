@@ -34,6 +34,22 @@
       overflow: hidden;
       visibility: visible;
       transition: max-height 0.5s;
+      &::-webkit-scrollbar {
+        position: absolute;
+        width: 5px;
+        padding: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: lightgray;
+        border: none;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: lightgray;
+      }
       ul li {
         display: flex;
         align-items: center;
