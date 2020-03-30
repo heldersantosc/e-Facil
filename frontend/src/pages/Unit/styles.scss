@@ -1,0 +1,54 @@
+@import "../../styles/constants.scss";
+
+.unit {
+  height: 100vh;
+  background-color: $azulBackground;
+
+  .container {
+    margin: 10px 5%;
+
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 26px;
+      height: 100px;
+      background-color: $alaranjado;
+      border-radius: 20px;
+      padding: 0px 40px;
+      //cursor: pointer;
+      outline: none;
+      user-select: none;
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    .content-list {
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+      margin: 0px 20px;
+      max-height: 0px;
+      background-color: white;
+      overflow: hidden;
+      visibility: visible;
+      transition: max-height 0.5s;
+      ul li {
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        list-style-type: none;
+        height: 100px;
+        user-select: none;
+        &:hover {
+          background-color: lightgrey;
+        }
+      }
+    }
+    .collapse {
+      max-height: 350px;
+      overflow-y: auto;
+    }
+  }
+}
