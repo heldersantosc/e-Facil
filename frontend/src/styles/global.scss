@@ -27,7 +27,20 @@ textarea {
   font: 400 18px Roboto, sans-serif;
 }
 
+.borda {
+  border: 1px solid black;
+}
 .no-button {
   background-color: transparent;
   border: 0px;
+}
+
+.bg-black {
+  background-color: black;
+}
+.txt-black {
+  color: black;
+}
+.txt-white {
+  color: white;
 }

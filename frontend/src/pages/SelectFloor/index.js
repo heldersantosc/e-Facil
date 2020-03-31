@@ -7,25 +7,25 @@ import Navbarcommon from "../../components/Navbar/NavbarCommon";
 import FooterLine from "../../components/FooterLine";
 
 export default function SelectFloor() {
-  const [option, setOption] = useState();
+  const [floor, setFloor] = useState();
   const [permission, setPermission] = useState();
   const history = useHistory();
 
-  function handleOption(optionValue) {
+  function handleOption(floorSelected) {
     if (permission === "true") {
-      setOption(optionValue);
+      setFloor(floorSelected);
+      localStorage.setItem("floorSelected", floorSelected);
       history.push("/selectvacancy");
-
-      localStorage.setItem("optionValue", optionValue);
     }
     if (permission === null) {
+      localStorage.clear();
       history.push("/login");
     }
   }
 
   useEffect(() => {
     setPermission(localStorage.getItem("permissionAccess"));
-  }, [history, option]);
+  }, [history, floor]);
 
   return (
     <>
@@ -61,27 +61,24 @@ export default function SelectFloor() {
             <h1 style={{ textAlign: "center", margin: "20px 0px" }}>
               Vagas Disponíveis
             </h1>
-            <div className="building borda">
-              <div className="board">
+            <div className="building">
+              <div className="board bg-black">
                 <h1>S1</h1>
                 <hr />
                 <h1>VAGAS: 42</h1>
               </div>
-              <div className="board">
+              <div className="board bg-black">
                 <h1>S1</h1>
                 <hr />
                 <h1>VAGAS: 42</h1>
               </div>
-              <div className="board">
+              <div className="board bg-black">
                 <h1>S1</h1>
                 <hr />
                 <h1>VAGAS: 42</h1>
               </div>
 
-              <div className="entrance">
-                <div className="door"></div>
-                <div className="door"></div>
-              </div>
+              <div className="entrance"></div>
             </div>
           </div>
         </div>

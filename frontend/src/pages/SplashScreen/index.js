@@ -10,6 +10,7 @@ export default function SplashScreen() {
   const history = useHistory();
 
   useEffect(() => {
+    localStorage.clear();
     const timer = setTimeout(() => {
       history.push("/selectunit");
     }, 5000);

@@ -7,6 +7,7 @@ import SelectUnit from "./pages/Unit";
 import CheckAccess from "./pages/CheckAccess";
 import SelectFloor from "./pages/SelectFloor";
 import SelectVacancy from "./pages/SelectVacancy";
+import SelectedVacancy from "./pages/SelectedVacancy";
 
 export default function Routes() {
   return (
@@ -19,6 +20,7 @@ export default function Routes() {
         <Route path="/checkaccess" component={CheckAccess} />
         <Route path="/selectfloor" component={SelectFloor} />
         <Route path="/selectvacancy" component={SelectVacancy} />
+        <Route path="/selectedvacancy" component={SelectedVacancy} />
       </Switch>
     </Router>
   );
