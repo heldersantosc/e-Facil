@@ -1,12 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import api from "../../services/api";
 
 import "./styles.scss";
 import Navbarcommon from "../../components/Navbar/NavbarCommon";
 import FooterLine from "../../components/FooterLine";
 
-export default function SelectFloor() {
+export default function SelectFloor(e) {
+  e.preventDefault();
   const [floor, setFloor] = useState();
   const [permission, setPermission] = useState();
   const history = useHistory();
