@@ -37,7 +37,7 @@ export default function Login() {
   }
 
   useEffect(() => {
-    localStorage.clear();
+    //localStorage.clear();
   }, []);
 
   return (
@@ -106,7 +106,7 @@ export default function Login() {
                 id=""
                 placeholder="Matrícula"
                 value={matricula}
-                onChange={e => setMatricula(e.target.value)}
+                onChange={(e) => setMatricula(e.target.value)}
                 readOnly
               />
             </>

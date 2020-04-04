@@ -16,4 +16,15 @@ app.use(express.json());
 app.use(routes);
 app.use(errors);
 
+/** desabilitando o x-powered-by */
+app.disable("x-powered-by");
+
+/** tratativa de leaking de erro  */
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    message: "Houve um problema ao executar a operação. Tente mais tarde",
+  });
+});
+
 module.exports = app;
