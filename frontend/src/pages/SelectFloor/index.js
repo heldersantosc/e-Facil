@@ -41,24 +41,26 @@ export default function SelectFloor() {
               <button
                 className="btn no-button"
                 onClick={() => handleOption("S1")}
+                style={{ cursor: "pointer" }}
               >
-                S1
+                S1 | VAGAS: 42
               </button>
               <button
                 className="btn no-button"
                 onClick={() => handleOption("S2")}
+                style={{ cursor: "pointer" }}
               >
-                S2
+                S2 | VAGAS: 35
               </button>
               <button
                 className="btn no-button"
-                onClick={() => handleOption("S3")}
+                style={{ backgroundColor: "gray", cursor: "pointer" }}
               >
-                S3
+                S3 | INDISP.
               </button>
             </div>
           </div>
-          <div>
+          {/* <div>
             <h1 style={{ textAlign: "center", margin: "20px 0px" }}>
               Vagas Disponíveis
             </h1>
@@ -78,10 +80,9 @@ export default function SelectFloor() {
                 <hr />
                 <h1>VAGAS: 42</h1>
               </div>
-
               <div className="entrance"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <FooterLine />

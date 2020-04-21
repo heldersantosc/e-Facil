@@ -53,7 +53,7 @@ export default function SelectVacancy() {
         <div className="vacancy-container">
           <div className="vacancy-group">
             <div className="vacancy-row">
-              {vacancies.map(vacancy => (
+              {vacancies.map((vacancy) => (
                 <button
                   key={vacancy}
                   type="button"
@@ -65,7 +65,19 @@ export default function SelectVacancy() {
               ))}
             </div>
             <div className="vacancy-row">
-              {vacancies.map(vacancy => (
+              {vacancies.map((vacancy) => (
+                <button
+                  key={vacancy}
+                  type="button"
+                  className="no-button"
+                  onClick={() => selectVacancy(vacancy, "blocked")}
+                >
+                  <VacancyButton status={"blocked"} number={vacancy} />
+                </button>
+              ))}
+            </div>
+            <div className="vacancy-row">
+              {vacancies.map((vacancy) => (
                 <button
                   key={vacancy}
                   type="button"
@@ -76,8 +88,9 @@ export default function SelectVacancy() {
                 </button>
               ))}
             </div>
+
             <div className="vacancy-row">
-              {vacancies.map(vacancy => (
+              {vacancies.map((vacancy) => (
                 <button
                   key={vacancy}
                   type="button"
@@ -89,7 +102,7 @@ export default function SelectVacancy() {
               ))}
             </div>
             <div className="vacancy-row">
-              {vacancies.map(vacancy => (
+              {vacancies.map((vacancy) => (
                 <button
                   key={vacancy}
                   type="button"
@@ -101,7 +114,7 @@ export default function SelectVacancy() {
               ))}
             </div>
             <div className="vacancy-row">
-              {vacancies.map(vacancy => (
+              {vacancies.map((vacancy) => (
                 <button
                   key={vacancy}
                   type="button"
